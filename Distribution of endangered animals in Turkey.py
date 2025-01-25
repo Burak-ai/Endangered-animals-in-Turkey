@@ -1,7 +1,7 @@
 import pandas as pd
 import plotly.express as px
 
-# Nesli tükenmekte olan hayvanların verilerini oluşturma
+
 data = {
     "Hayvan Türü": [
         "Deniz Kaplumbağası",
@@ -45,10 +45,10 @@ data = {
     ],
 }
 
-# Veriyi DataFrame'e çevirme
+
 df = pd.DataFrame(data)
 
-# Türkiye haritası üzerinde hayvan dağılımını görselleştirme
+
 fig = px.scatter_geo(
     df,
     lat="Enlem",
@@ -57,10 +57,10 @@ fig = px.scatter_geo(
     title="Türkiye'de Nesli Tükenmekte Olan Hayvanların Dağılımı",
     scope="europe",
     labels={"Hayvan Türü": "Tür"},
-    hover_data=["Koruma Durumu", "Popülasyon Tahmini", "Bölge"],  # Ekstra bilgiler
+    hover_data=["Koruma Durumu", "Popülasyon Tahmini", "Bölge"],
 )
 
-# Harita özelliklerini güncelleme
+
 fig.update_geos(
     visible=True,
     resolution=50,
@@ -70,5 +70,5 @@ fig.update_geos(
     coastlinecolor="LightBlue",
 )
 
-# Grafik gösterimi
+
 fig.show()
