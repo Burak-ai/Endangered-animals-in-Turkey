@@ -57,7 +57,7 @@ fig = px.scatter_geo(
     title="Türkiye'de Nesli Tükenmekte Olan Hayvanların Dağılımı",
     scope="europe",
     labels={"Hayvan Türü": "Tür"},
-    hover_data=["Koruma Durumu", "Popülasyon Tahmini", "Bölge"],
+    hover_data=["Koruma Durumu", "Popülasyon Tahmini", "Bölge"],  # Ekstra bilgiler
 )
 
 
@@ -71,4 +71,6 @@ fig.update_geos(
 )
 
 
-fig.show()
+fig.write_html("index.html")
+
+print("index.html dosyası oluşturuldu.")
