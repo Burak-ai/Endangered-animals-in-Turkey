@@ -49,3 +49,4 @@ fig.update_geos(
 )
 
 fig.write_html("index.html")
+
